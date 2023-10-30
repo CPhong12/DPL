@@ -1,53 +1,58 @@
 from flask import Flask, request, render_template
 import torch
-import torchvision.transforms as transforms
+from torchvision.transforms import functional as F
 from PIL import Image, ImageDraw
-import io
+import torchvision
 
 app = Flask(__name__)
-model = torch.load("best.pt")
+model = None
+
+# Load your PyTorch model here
+def load_model():
+    global model
+    model = torch.load("static/model.pt", map_location=torch.device('cpu'))  # Adjust 'cpu' to the appropriate device
+load_model()
+
+def predict_image(image):
+    image_tensor = F.to_tensor(image).unsqueeze(0)  # Convert PIL image to a PyTorch tensor
+    with torch.no_grad():
+        prediction = model(image_tensor)
+    return prediction
 
 @app.route('/')
 def home():
     return render_template('TrafficSign.html')
 
-@app.route('/predict', methods=['GET'])
-def model():
+@app.route('/model')
+def man():
     return render_template('Model.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
-    if 'image' not in request.files:
-        return "No image part"
-    img = request.files['image']
-    if img.filename == '':
-        return "No selected image"
+    if request.method == "POST":
+        if "image" not in request.files:
+            return "No file part"
+        image_file = request.files["image"]
+        if image_file.filename == "":
+            return "No selected file"
 
-    img_path = 'test/' + img.filename
-    img.save(img_path)
+        if image_file:
+            img = Image.open(image_file)
+            prediction = predict_image(img)
 
-    img, detection_result, classification_result = detect_and_classify_image(img_path)
+            draw = ImageDraw.Draw(img)
 
-    # Process detection results and draw bounding boxes on the image
-    img_with_boxes = img.copy()
-    draw = ImageDraw.Draw(img_with_boxes)
+            # Extract bounding box coordinates and labels from the prediction
+            boxes = prediction[0]['boxes'].tolist()
+            labels = prediction[0]['labels'].tolist()
 
-    for box in detection_result:
-        left, top, right, bottom, _ = box.tolist()
-        draw.rectangle([left, top, right, bottom], outline="red")
+            for box, label in zip(boxes, labels):
+                box = [int(i) for i in box]  # Convert to integers
+                draw.rectangle(box, outline="red", width=3)
+                draw.text((box[0], box[1]), f"Label: {label}", fill="red")
 
-    # Encode the image in base64 format
-    buffered = io.BytesIO()
-    img_with_boxes.save(buffered, format="JPEG")
-    encoded_image = base64.b64encode(buffered.getvalue()).decode('utf-8')
-
-    # Update the results on the HTML page using JavaScript
-    response_data = {
-        "image": encoded_image,
-        "classification": classification_result
-    }
-
-    return jsonify(response_data)
+            img.save("static/predicted_image.jpg")
+            return render_template("TrafficSign.html", image_url="static/predicted_image.jpg")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8080)

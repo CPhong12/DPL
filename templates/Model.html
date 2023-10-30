@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Image Classification with Bounding Boxes</title>
-</head>
-<body>
-    <h1>Image Classification</h1>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+    </head>
+    <body>    
+        <center>
+            <div class='cont'>
+                <h2>WELCOME<br> TO CAT-DOG PREDICTION</h2>
+            </div>
+            
 
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="image">Select an image:</label>
-        <input type="file" name="image" accept="image/*">
-        <input type="submit" value="Predict">
-    </form>
-    <img src="{{ image_path }}" alt="Uploaded Image" width="400">
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <input type="file" name="image">
+                <input type="submit" value="Predict">
+            </form>
+            <br>
+            <img src="{{ image_url }}" alt="Predicted Image">
 
-</body>
+    </center>
+
+    </body>
 </html>
