@@ -1,41 +1,19 @@
-from flask import Flask, request, render_template, jsonify
-import os
-from PIL import Image, ImageDraw
+from flask import Flask, request, render_template
 import torch
-import torchvision.transforms as T
-import base64
+import torchvision.transforms as transforms
+from PIL import Image, ImageDraw
 import io
 
 app = Flask(__name__)
-
-model = torch.load('best.pt', map_location=torch.device('cpu'))
-model.eval()
-
-def detect_and_classify_image(image_path):
-    # Load and preprocess the image
-    img = Image.open(image_path)
-    transform = T.Compose([T.Resize((224, 224)), T.ToTensor()])
-    img_tensor = transform(img)
-    img_tensor = img_tensor.unsqueeze(0)
-
-    # Perform detection
-    detection_result = model.detect(img_tensor)
-
-    # Perform classification
-    classification_result = model.classify(img_tensor)
-
-    return img, detection_result, classification_result
-
+model = torch.load("best.pt")
 
 @app.route('/')
 def home():
     return render_template('TrafficSign.html')
 
-
 @app.route('/predict', methods=['GET'])
 def model():
     return render_template('Model.html')
-
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -45,11 +23,10 @@ def predict():
     if img.filename == '':
         return "No selected image"
 
-    img_path = 'uploads/' + img.filename
+    img_path = 'test/' + img.filename
     img.save(img_path)
 
-    img, detection_result, classification_result = detect_and_classify_image(
-        img_path)
+    img, detection_result, classification_result = detect_and_classify_image(img_path)
 
     # Process detection results and draw bounding boxes on the image
     img_with_boxes = img.copy()
@@ -71,7 +48,6 @@ def predict():
     }
 
     return jsonify(response_data)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
