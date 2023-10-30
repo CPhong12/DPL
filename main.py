@@ -3,6 +3,7 @@ import torch
 from torchvision.transforms import functional as F
 from PIL import Image, ImageDraw
 import torchvision
+from ultralytics import YOLO
 
 app = Flask(__name__)
 model = None
@@ -10,7 +11,9 @@ model = None
 # Load your PyTorch model here
 def load_model():
     global model
-    model = torch.load("static/model.pt", map_location=torch.device('cpu'))  # Adjust 'cpu' to the appropriate device
+    model = YOLO()  # Instantiate the YOLOv8 model
+   model.load_state_dict(torch.load("static/model.pt"))
+    model.eval()  # Set the YOLOv8 model in evaluation mode
 load_model()
 
 def predict_image(image):
