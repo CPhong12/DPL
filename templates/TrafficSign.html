@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/b9980e899c.js" crossorigin="anonymous"></script>
+    <!-- Title of The Page -->
+    <title>Traffic Sign</title>
+    <!-- Meta Informations -->
+    <meta charset="utf-8">
+    <meta name="description" content="Final Project">
+    <meta name="author" content="Group 1">
+    <!-- Favicon -->
+    <link rel="icon" href="#" type="images/logo/fresh.jpg">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/stylesheet.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awsome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+</head>
+</head>
+    <body>
+    
+    <!-- Header STARTS Here -->
+    <header>
+        <!-- Navbar STARTS Here -->
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="http://127.0.0.1:5500/Traffic%20Sign/Web1/TrafficSign.html"><img src="{{ url_for('static', filename='images/fresh.png') }}" class="img-fluid"
+                        alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home"><img src="{{ url_for('static', filename='images/home_icon.png') }}"
+                                    class="img-fluid img-responsive">Home<span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about"><img src="{{ url_for('static', filename='images/home_icon.png') }}"
+                                    class="img-fluid img-responsive">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#our_team"><img src="{{ url_for('static', filename='images/home_icon.png') }}"
+                                    class="img-fluid img-responsive">Team</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#our_team"><img src="#"
+                                    class="img-fluid img-responsive">   </a>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-orange"
+                                href="###"
+                                target="_blank">Donate</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar ENDS Here -->
+    </header>
+    <!-- Header ENDS Here -->
+
+    <!-- Main Body STARTS here -->
+
+    <!-- Home Banner Start -->
+    <section id="home" class="home-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="main-heading">
+                        <h1>Sign by Sign<br> <span>We Secure Your Drive!</span></h1>
+                    </div>
+                    <div class="home-icon">
+                        <!-- <p>Application opens <span> April 16th, 2022</span></p> -->
+                        <a class="btn-orange" href="{{ url_for('model') }}" target="_blank">Open model !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Banner End -->
+    <!-- About Us Section Start -->
+    <section id="about" class="effective-bg text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="heading text-center">
+                        <h2>About our Project</h2>
+                    </div>
+                    <div class="author-content">
+                        <img src="{{ url_for('static', filename='images/comma.png') }}" class="img-fluid" alt="author-img">
+                        <!-- <p> Founded in 2022, Project X is a non-profit organization that seeks to nurture the next
+                            generation
+                            of talent in Vietnam's rising wave of innovation and technology development as we commit to: -->
+                            <p>Traffic Sign Recognition (TSR) is at the core of our project, and our focus is on enhancing road safety and efficiency. 
+                                Using advanced computer vision and deep learning technologies, our project enables the robust 
+                                identification and classification of traffic signs in images and static frames. Whether it's detecting speed limits, 
+                                stop signs, or directional indicators, our system excels in providing accurate information and enhancing driver awareness.
+                                 We are dedicated to promoting safer road conditions and more effective traffic management through the power of artificial 
+                                 intelligence. Our mission is to contribute to the improvement of road safety by harnessing cutting-edge technology, 
+                                 all without the need for real-time video. Join us in our commitment to making our roads safer for all.</p>
+                        </p>
+                        <!-- <ul class="purposes">
+                            <li><span>Empower</span>
+                                students, regardless of their background, to reach their full potential in their
+                                chosen
+                                profession
+                                by providing them with <span>early-career consultancy</span>, <span>industry
+                                    connections</span>, and <span>rigorous training</span> in
+                                technical and soft skills
+                            </li>
+                            <li><span>Support</span> tech startups in accelerating growth by providing them
+                                with a
+                                source of <span>highly motivated</span>, <span>ambitious</span>, and
+                                <span>inquisitive</span> interns, who will help maximize
+                                their
+                                greatest
+                                asset - the people - in the future.
+                            </li>
+                        </ul> -->
+                        <!-- <p>
+                            We are a community of <span>responsible</span> citizens,
+                            <span>ambitious</span> thinkers,
+                            <span>purpose-driven</span> hustlers, and <span>capable</span> talents in today’s rapidly
+                            changing world
+                            of innovative
+                            technologies and emerging economies.
+                        </p> -->
+                        </p>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
+    </body>
+    
+    <!-- Modern Feature Section Start -->
+    <div id="why-us" class="heading head text-center">
+        <h2><br> Why Traffic sign recognization</h2>
+    </div>
+    <section class="feature-bg">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6 col-sm-7">
+                    <div class="heading head">
+                        <!-- <h2>We Provide <span>Reduction in human error</span> the <span>Essential Jumpstart</span>
+                        </h2> -->
+                    </div>
+                    <p class="dark-color">Reduction in human error:</p>
+                    <p>Human drivers may miss or misinterpret traffic signs due to various factors like distractions, 
+                        fatigue, or poor visibility. TSR systems can accurately and consistently detect and interpret traffic signs, 
+                        reducing the chances of human error and improving compliance with traffic regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="both-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-7">
+                    <div class="heading head">
+                        <!-- <h2>We Connect <span> Startups</span> with the <span>Undiscovered <br>Talent Pool</span> </h2> -->
+                    </div>
+                    <p class="dark-color">Enhancing road safety:</p>
+                    <p>By alerting drivers to important traffic sign information, TSR helps prevent accidents, 
+                        especially those caused by speeding, wrong turns, or failure to yield. It promotes safer driving behavior 
+                        and adherence to traffic rules, contributing to overall road safety.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modern Feature Section End -->
+    
+    <!-- Our Members Section Start -->
+   
+    <section id="our_team" class="author-bg text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="section-title col-md-12">
+                    <div class="heading text-center">
+                        <h2>Our Team</h2>
+                    </div>
+                </div>
+
+                <div class="owl-carousel owl-theme investment-partners">
+                    <!-- Row 1 -->
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <!-- Nguyen Ngoc Vu Thong -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Thông.jpg') }}" class="img-fluid img1"
+                                            alt="Nguyen Ngoc Vu Thong">
+                                        <img title="Google" src="{{ url_for('static', filename='images/Team/Thông.jpg') }}" class="overlay"
+                                            alt="Google">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/profile.php?id=100009607721916">
+                                                Nguyen Ngoc Vu Thong</a></h5>
+                                        <p style="color:#ffffff;font-size:15px">Data (Leader) <br>
+                                        <p style="color:#ffffff;font-size:15px; opacity: 0;">Data (Leader) <br>
+                                        <h6> FPTU HCM  </h6>
+                                        <p style="font-size:18px"> ###  </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bui Nhat Tan -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Tân.jpg') }}" class="img-fluid img1"
+                                            alt="Bui Nhat Tan">
+                                        <img title="Google" src="{{ url_for('static', filename='images/Team/Tân.jpg') }}"class="overlay"
+                                            alt="FPT">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/profile.php?id=100028849637065">Bui Nhat Tan</a></h5>
+                                        <p style="color:#ffffff;font-size:15px">Web<br>
+                                        <p style="color:#ffffff;font-size:15px; opacity: 0;">Web <br>
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">Binh Thuan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Le Hong Anh Thu -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Thư.jpg') }}" class="img-fluid img1"
+                                            alt="Le Hong Anh Thu">
+                                        <img title="FPT" src="{{ url_for('static', filename='images/Team/Thư.jpg') }}" class="overlay" alt="FPT">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/thule.ha29">Le Hong Anh Thu</a></h5>
+                                        <p style="color:#ffffff;font-size:15px"> Data </p>
+                                        <p style="color:#ffffff;font-size:15px; opacity: 0;">Data <br>
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">Vietnam</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bui Thien Phu -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Phú.jpg') }}" class="img-fluid img1" alt="Le Hong Anh Thu">
+                                        <img title="Bui Thien Phu" src="{{ url_for('static', filename='images/Team/Phú.jpg') }}" class="overlay"
+                                            alt="Bui Thien Phu">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/hellophongdesu.chan">Bui Thien Phu</a></h5>
+                                        <p style="color:#ffffff;font-size:15px">Web<br>
+                                        <p style="color:#ffffff;font-size:15px; opacity: 0;">Data (Leader) <br>
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">An Giang</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <!-- Duong Lam Quoc Bao -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Bảo.jpg') }}" class="img-fluid img1" alt="Duong Lam Quoc Bao">
+                                        <img title="Meta" src="{{ url_for('static', filename='images/Team/Bảo.jpg') }}" class="overlay"
+                                            alt="Meta">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/bao.duonglamquoc">Duong Lam Quoc Bao</a></h5>
+                                        <p style="color:#ffffff;font-size:15px;opacity:10">Data collection</p>
+                                        <p style="color:#ffffff;font-size:15px; opacity: 0;">Data collection <br>
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">Viet Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bui Tuan Huy -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Huy.jpg') }}" class="img-fluid img1"
+                                            alt="Bui Tuan Huy">
+                                        <img title="CNA" src="{{ url_for('static', filename='images/Team/Huy.jpg') }}" class="overlay" alt="CNA">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/profile.php?id=100039281434069">Bui Tuan Huy</a></h5>
+                                        <p style="color:#ffffff;font-size:15px">Data Scientist<br>
+                                        <p style="color:#ffffff;font-size:15px;opacity:0">Data Scientist</p>
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">Viet Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nguyen Vo Thanh Duy -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Duy.jpg') }}" class="img-fluid img1" alt="Tien Dao">
+                                        <img title="Microsoft" src="{{ url_for('static', filename='images/Team/Duy.jpg') }}"
+                                            class="overlay" alt="Microsoft">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/duynvt2003">Nguyen Vo Thanh Duy</a></h5>
+                                        <p style="color:#ffffff;font-size:15px">Model<br>
+                                        <p style="color:#ffffff;font-size:15px;opacity:0">Model</p>
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">Viet Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Phan Le Thanh Thao -->
+                            <div class="col-md-3 col-sm-6 ">
+                                <div class="partner-bg">
+                                    <div class="partner-img">
+                                        <img src="{{ url_for('static', filename='images/Team/Thảo.jpg') }}" class="img-fluid img1" alt="Phan Le Thanh Thao">
+                                        <img title="Amazon" src="{{ url_for('static', filename='images/Team/Thảo.jpg') }}" class="overlay"
+                                            alt="Amazon">
+                                    </div>
+                                    <div class="partner-content">
+                                        <h5><a target="_blank"
+                                                href="https://www.facebook.com/thao.phan.beba">Phan Le Thanh Thao</a></h5>
+                                        <p style="color:#ffffff;font-size:15px">Data<br>
+                                        <p style="color:#ffffff;font-size:15px; opacity: 0;">Data<br>
+
+                                        <h6>FPTU HCM</h6>
+                                        <p style="font-size:18px">###</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav2"></div>
+        </div>
+    </section>
+    <!-- Our Members Section End -->
+
+    <!-- Footer start Here -->
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <ul class="footer-content">
+                        <li><a href="###">abc@fpt.edu.vn</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="index.html"><img src="{{ url_for('static', filename='images/fresh.png') }}" class="img-fluid" alt="Footer-logo"></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <ul class="footer-icon">
+                        <li><a href="https://www.facebook.com/bao.duonglamquoc" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/duonglamquocbao/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-2">### <span>Traffic Sign</span></p>
+        </div>
+    </footer>
+    
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Predict</button>
+      </form>
+      <div id="result"></div>
+    
+    <!-- Footer ENDS Here -->
+
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    
+</body>
+</html>
