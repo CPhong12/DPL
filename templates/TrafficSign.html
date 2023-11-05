@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<html>
-    
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,8 +18,6 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}">
-
-</head>
 </head>
     <body>
     
@@ -84,7 +79,8 @@
                     </div>
                     <div class="home-icon">
                         <!-- <p>Application opens <span> April 16th, 2022</span></p> -->
-                        <a class="btn-orange" href="{{ url_for('man') }}" target="_blank">Open model !</a>
+                        <a class="btn-orange" href=FrontPage target="_blank">Open model !</a>
+                        <!-- <a class="btn-orange" href=webcam target="_blank">LiveWebcam</a> -->
                     </div>
                 </div>
             </div>
@@ -97,7 +93,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <div class="heading text-center">
-                        <h2>About our Project</h2>
+                        <h2>Who we are</h2>
                     </div>
                     <div class="author-content">
                         <img src="{{ url_for('static', filename='images/comma.png') }}" class="img-fluid" alt="author-img">
@@ -145,11 +141,10 @@
         </div>
     </section>
     <!-- About Us Section End -->
-    </body>
     
     <!-- Modern Feature Section Start -->
     <div id="why-us" class="heading head text-center">
-        <h2><br> Why Traffic sign recognization</h2>
+        <h2><br> Why traffic sign recognization</h2>
     </div>
     <section class="feature-bg">
         <div class="container">
@@ -216,7 +211,7 @@
                                         <p style="color:#ffffff;font-size:15px">Data (Leader) <br>
                                         <p style="color:#ffffff;font-size:15px; opacity: 0;">Data (Leader) <br>
                                         <h6> FPTU HCM  </h6>
-                                        <p style="font-size:18px"> ###  </p>
+                                        <p style="font-size:18px"> Ho Chi Minh </p>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +248,7 @@
                                         <p style="color:#ffffff;font-size:15px"> Data </p>
                                         <p style="color:#ffffff;font-size:15px; opacity: 0;">Data <br>
                                         <h6>FPTU HCM</h6>
-                                        <p style="font-size:18px">Vietnam</p>
+                                        <p style="font-size:18px">Kien Giang</p>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +289,7 @@
                                         <p style="color:#ffffff;font-size:15px;opacity:10">Data collection</p>
                                         <p style="color:#ffffff;font-size:15px; opacity: 0;">Data collection <br>
                                         <h6>FPTU HCM</h6>
-                                        <p style="font-size:18px">Viet Nam</p>
+                                        <p style="font-size:18px">Ho Chi Minh</p>
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +307,7 @@
                                         <p style="color:#ffffff;font-size:15px">Data Scientist<br>
                                         <p style="color:#ffffff;font-size:15px;opacity:0">Data Scientist</p>
                                         <h6>FPTU HCM</h6>
-                                        <p style="font-size:18px">Viet Nam</p>
+                                        <p style="font-size:18px">Dong Thap</p>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +325,7 @@
                                         <p style="color:#ffffff;font-size:15px">Model<br>
                                         <p style="color:#ffffff;font-size:15px;opacity:0">Model</p>
                                         <h6>FPTU HCM</h6>
-                                        <p style="font-size:18px">Viet Nam</p>
+                                        <p style="font-size:18px">Tien Giang</p>
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +344,7 @@
                                         <p style="color:#ffffff;font-size:15px; opacity: 0;">Data<br>
 
                                         <h6>FPTU HCM</h6>
-                                        <p style="font-size:18px">###</p>
+                                        <p style="font-size:18px">Dong Nai</p>
                                     </div>
                                 </div>
                             </div>
@@ -386,16 +381,10 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center mb-2">### <span>Traffic Sign</span></p>
+            <p class="text-center mb-2">Traffic Sign</p>
         </div>
     </footer>
-    
-    <form method="POST" action="/predict" enctype="multipart/form-data">
-        <input type="file" name="file" accept="image/*">
-        <button type="submit">Predict</button>
-      </form>
-      <div id="result"></div>
-    
+   
     <!-- Footer ENDS Here -->
 
     <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>

@@ -346,7 +346,7 @@ a.nav-link img {
 
 /* Modern Feature Css */
 .feature-bg {
-  background: url("bg1.png") no-repeat center left/44%;
+  background: url("bg3.png") no-repeat center left/44%;
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -365,7 +365,7 @@ a.nav-link img {
 }
 
 .both-bg {
-  background: url("up.png") no-repeat center right/41%;
+  background: url("bg2.png") no-repeat center right/41%;
   height: 70vh;
   display: flex;
   justify-content: center;
