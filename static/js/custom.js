@@ -45,7 +45,7 @@ $('#sync2').owlCarousel({
   nav: true,
   dots: false,
     navContainer: ".slider-nav2",
-    navText: ["<img src='ar_l.png'>", "<img src='ar_r.png'>"],
+    navText: ["<img src='static\\js\\ar_l.png'>", "<img src='static\\js\\ar_r.png'>"],
     responsive: {
       0: {
           items: 1
@@ -65,7 +65,7 @@ $('#sync2').owlCarousel({
     nav:true,
     dots: false,
       navContainer: ".slider-nav2",
-      navText: ["<img src='ar_l.png'>", "<img src='ar_r.png'>"],
+      navText: ["<img src='static\\js\\ar_l.png'>", "<img src='static\\js\\ar_r.png'>"],
       responsive:{
         0:{
             items:1
@@ -86,7 +86,7 @@ $('#sync2').owlCarousel({
     nav:true,
     dots: false,
       navContainer: ".slider-nav2",
-      navText: ["<img src='ar_l.png'>", "<img src='ar_r.png'>"],
+      navText: ["<img src='static\\js\\ar_l.png'>", "<img src='static\\js\\ar_r.png'>"],
       responsive:{
         0:{
             items:1

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Sign Recognition</title>
+    
     <style>
         body {
             margin: 0;
@@ -71,8 +72,12 @@
 </head>
 <body>
 <header class="top">
-    <h1><strong>Traffic Sign Recognition</strong></h1>
-</header>
+    <a href="home" style="text-decoration: none; color: #333; text-align: center; display: block; margin: 20px;">
+        <h1 style="font-size: 34px; font-weight: bold; margin: 0;">
+          <strong>Traffic Sign Recognition</strong>
+        </h1>
+      </a>
+      </header>
 <header class="second">
     <h1><strong>Output Video</strong></h1>
 </header>
@@ -83,11 +88,12 @@
     <div class="upload-form">
         <form method="POST" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
-            <label class="custom-file-label" for="file">Choose a video file</label>
+            <label class="custom-file-label" for="file">Choose a file</label>
             {{ form.file(id="file", class_="custom-file-input") }}
             <button type="submit" name="favorite" value="x" class="btn-custom">Submit</button>
         </form>
     </div>
 </div>
+
 </body>
 </html>
