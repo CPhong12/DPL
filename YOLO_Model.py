@@ -34,7 +34,6 @@ def video_detection(path_x):
                     cv2.rectangle(img, (x1,y1), (x2,y2), color,3)
                     cv2.rectangle(img, (x1,y1), c2, color, -1, cv2.LINE_AA)  # filled
                     cv2.putText(img, label, (x1,y1-2),0, 1,[255,255,255], thickness=1,lineType=cv2.LINE_AA)
-
         yield img
         #out.write(img)
         #cv2.imshow("image", img)

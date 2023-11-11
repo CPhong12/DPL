@@ -42,14 +42,14 @@ def generate_frames(path_x = ''):
         yield (b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + frame +b'\r\n')
 
-def generate_frames_web(path_x):
-    yolo_output = video_detection(path_x)
-    for detection_ in yolo_output:
-        ref,buffer=cv2.imencode('.jpg',detection_)
+# def generate_frames_web(path_x):
+#     yolo_output = video_detection(path_x)
+#     for detection_ in yolo_output:
+#         ref,buffer=cv2.imencode('.jpg',detection_)
 
-        frame=buffer.tobytes()
-        yield (b'--frame\r\n'
-                    b'Content-Type: image/jpeg\r\n\r\n' + frame +b'\r\n')
+#         frame=buffer.tobytes()
+#         yield (b'--frame\r\n'
+#                     b'Content-Type: image/jpeg\r\n\r\n' + frame +b'\r\n')
 
 @app.route('/', methods=['GET','POST'])
 @app.route('/home', methods=['GET','POST'])
@@ -59,11 +59,11 @@ def home():
 # Rendering the Webcam Rage
 #Now lets make a Webcam page for the application
 #Use 'app.route()' method, to render the Webcam page at "/webcam"
-@app.route("/webcam", methods=['GET','POST'])
+# @app.route("/webcam", methods=['GET','POST'])
 
-def webcam():
-    session.clear()
-    return render_template('ui.html')
+# def webcam():
+#     session.clear()
+#     return render_template('ui.html')
 @app.route('/FrontPage', methods=['GET','POST'])
 def front():
     # Upload File Form: Create an instance for the Upload File Form
@@ -83,10 +83,15 @@ def video():
     return Response(generate_frames(path_x = session.get('video_path', None)),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # To display the Output Video on Webcam page
-@app.route('/webapp')
-def webapp():
-    #return Response(generate_frames(path_x = session.get('video_path', None),conf_=round(float(session.get('conf_', None))/100,2)),mimetype='multipart/x-mixed-replace; boundary=frame')
-    return Response(generate_frames_web(path_x=0), mimetype='multipart/x-mixed-replace; boundary=frame')
+# @app.route('/webapp')
+# def webapp():
+#     #return Response(generate_frames(path_x = session.get('video_path', None),conf_=round(float(session.get('conf_', None))/100,2)),mimetype='multipart/x-mixed-replace; boundary=frame')
+#     return Response(generate_frames_web(path_x=0), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route('/FrontPage')
+def label():
+    result = video_detection()
+
+    return render_template('videoprojectnew.html', result=result)
 if __name__ == "__main__":
     app.run(debug=True)
